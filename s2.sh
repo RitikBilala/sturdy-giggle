@@ -21,7 +21,7 @@ if [[ running != ${running} ]]; then
 fi
 
 # Ensures apache2 Service is enabled 
-enabled=$(systemctl is-enabled apache2 | grep "disabled")
+enabled=$(systemctl is-enabled apache2 | grep "enabled")
 if [[ enabled != ${enabled} ]]; then
 	#statements
 	systemctl enable apache2
